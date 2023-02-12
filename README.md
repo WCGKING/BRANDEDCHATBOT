@@ -1,3 +1,9 @@
+<h2 align="center">   
+    ──「◄⏤͟͞ꭙͯ͢³⋆꯭ꙶ⋆꯭ͣ⋆᭄ͫ͢🍁⃝🇧𝐑𝐀𝐍𝐃𝐄𝐃 ᥫᩣ🇰𝗜𝗡𝗚𐏓꯭ ᷞ ͦ͢ ͮ ͤ𓆪🕊⃝🦋 」──  
+   </h2>  
+ <p align="center">   
+<img src="https://graph.org/file/51e1bf391ebb7421aca57.jpg"
+
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 # ᴀʙᴏᴜᴛ
