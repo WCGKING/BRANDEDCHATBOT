@@ -21,8 +21,8 @@
 <i>ᴀʟʟ ᴛʜᴇ ᴄᴜsᴛᴏᴍɪsᴀᴛɪᴏɴs ᴀʀᴇ ᴀᴠᴀɪʟᴀʙʟᴇ. ᴊᴜsᴛ ᴄʜᴇᴄᴋᴏᴜᴛ ᴛʜᴇ ʀᴇᴘᴏ ᴀɴᴅ ᴠᴀʀɪᴀʙʟᴇs.</i>
 <p align="center"><a href="https://t.me/https:Rajpomane/Mickey"> <img src="https://img.shields.io/badge/CHECK-Demo%20Robot-black?style=for-the-badge&logo=Telegram" width="220" height="39"/></a></p>
 
-## ʀᴇᴘᴏ sᴛᴀᴛs
-<a href="https://github.com/Rajpomane/Mickey"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Devarora-0981&repo=Mickey&theme=chartreuse-dark"></a>
+## ʙʀᴀɴᴅᴇᴅ ᴋɪɴɢ 🚬🦋
+<a href="https://github.com/Rajpomane/ʙʀᴀɴᴅᴇᴅ ᴋɪɴɢ"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Devarora-0981&repo=Mickey&theme=chartreuse-dark"></a>
 
 ### sᴜᴘᴘᴏʀᴛ
 <p align="center"><a href="https://t.me/@Worldchattinggroup0"> <img src="https://img.shields.io/badge/JOIN-SUPPORT%20GROUP-black?style=for-the-badge&logo=Telegram" width="220" height="38.5"/></a></p>
