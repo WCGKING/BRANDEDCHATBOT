@@ -19,20 +19,20 @@
 
 ## <i>ᴄʜᴇᴄᴋ ᴛʜᴇ ᴅᴇᴍᴏ ʀᴏʙᴏᴛ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ!</i>
 <i>ᴀʟʟ ᴛʜᴇ ᴄᴜsᴛᴏᴍɪsᴀᴛɪᴏɴs ᴀʀᴇ ᴀᴠᴀɪʟᴀʙʟᴇ. ᴊᴜsᴛ ᴄʜᴇᴄᴋᴏᴜᴛ ᴛʜᴇ ʀᴇᴘᴏ ᴀɴᴅ ᴠᴀʀɪᴀʙʟᴇs.</i>
-<p align="center"><a href="https://t.me/mickeymouse_robot"> <img src="https://img.shields.io/badge/CHECK-Demo%20Robot-black?style=for-the-badge&logo=Telegram" width="220" height="39"/></a></p>
+<p align="center"><a href="https://t.me/https:Rajpomane/Mickey"> <img src="https://img.shields.io/badge/CHECK-Demo%20Robot-black?style=for-the-badge&logo=Telegram" width="220" height="39"/></a></p>
 
 ## ʀᴇᴘᴏ sᴛᴀᴛs
 <a href="https://github.com/Devarora-0981/Mickey"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Devarora-0981&repo=Mickey&theme=chartreuse-dark"></a>
 
 ### sᴜᴘᴘᴏʀᴛ
-<p align="center"><a href="https://t.me/we_rfriends"> <img src="https://img.shields.io/badge/JOIN-SUPPORT%20GROUP-black?style=for-the-badge&logo=Telegram" width="220" height="38.5"/></a></p>
-<p align="center"><a href="https://t.me/DEVBOTZ"> <img src="https://img.shields.io/badge/JOIN-SUPPORT%20CHANNEL-black?style=for-the-badge&logo=Telegram" width="220" height="38.5"/></a></p>
+<p align="center"><a href="https://t.me/@Worldchattinggroup0"> <img src="https://img.shields.io/badge/JOIN-SUPPORT%20GROUP-black?style=for-the-badge&logo=Telegram" width="220" height="38.5"/></a></p>
+<p align="center"><a href="https://t.me/@Worldchattinggroup0"> <img src="https://img.shields.io/badge/JOIN-SUPPORT%20CHANNEL-black?style=for-the-badge&logo=Telegram" width="220" height="38.5"/></a></p>
 
-## sᴘᴇᴄɪᴀʟ ᴛʜᴀɴᴋs 🙏
-- [ᴘʀᴀɴᴀᴠ ᴀᴊᴀʏ](https://github.com/Moezilla)
-- [ᴀɴᴏɴʏᴍᴏᴜs](https://github.com/AnonymousX1025)
-- [ᴀʙɪsʜɴᴏɪ](https://t.me/Abishnoi1m)
-- [ʜʏᴘᴇʀ ᴋɪɴɢ](https://t.me/HYPER_AD13)
+## sᴘᴇᴄɪᴀʟ ᴛʜᴀɴᴋs 🚬🦋
+- [ʀᴀᴊ](https://github.com/Moezilla)
+- [ᴘᴏɪsᴏɴ ᴘᴏᴡᴇʀ](https://github.com/Rajpomane)
+- [Rᴏʏᴀʟ Rᴀᴊᴘᴜᴛ](https://t.me/B_A_N_G_A_D_B_I_L_L_A)
+- [Bʀᴀɴᴅᴇᴅ ᴋɪɴɢ](https://t.me/networkwcg)
 
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
