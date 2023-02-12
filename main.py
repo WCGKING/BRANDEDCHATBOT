@@ -15,7 +15,7 @@ from pymongo import MongoClient
 from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 
 
-API_ID = os.environ.get("24315255", ) 
+API_ID = os.environ.get("24315255") 
 API_HASH = os.environ.get("129b292dc07c43347e3255c09e0a3e49", None) 
 BOT_TOKEN = os.environ.get("6137836765:AAEzCa9Swzl3Rk44R7Al3A3o6etJjuLpYOA", None) 
 MONGO_URL = os.environ.get("mongodb+srv://Musicbot58:93529352@cluster0.n6wscri.mongodb.net/?retryWrites=true&w=majority", None)
