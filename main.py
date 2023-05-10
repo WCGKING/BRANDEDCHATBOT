@@ -25,15 +25,15 @@ OWNER_ID = os.environ.get("5922967509")
 OWNER_USERNAME = os.environ.get("@King82w")
 SUPPORT_GRP = os.environ.get("https://t.me/Worldchattinggroup0")
 BOT_NAME = os.environ.get("≛⃝𝐌𝐈𝐒𝐒 🇰𝐡𝐮𝐬𝐡𝐢 𓆩 𝐃𝐑𝐀𝐌𝐀 🇶𝗨𝗘𝗘𝗡๛🖤")
-START_IMG1 = os.environ.get("https://graph.org/file/5ac33ec42659ff48c4b81.jpg")
+START_IMG1 = os.environ.get("https://telegra.ph/file/b27a946b7dd4a89dcb205.jpg")
 START_IMG2 = os.environ.get("https://graph.org/file/70c214a03ad0b53d239e0.jpg")
-START_IMG3 = os.environ.get("https://graph.org/file/ca3ea32256a91bb6ae91e.jpg")
-START_IMG4 = os.environ.get("https://graph.org/file/3235b1a68ab2c3ad5efc9.jpg")
-START_IMG5 = os.environ.get("https://graph.org/file/760726999bdc5a3e2fd4f.jpg")
-START_IMG6 = os.environ.get("https://graph.org/file/9bf17421e70cf99fb9649.jpg")
-START_IMG7 = os.environ.get("https://graph.org/file/898887597ec2472ffdd30.jpg")
-START_IMG8 = os.environ.get("https://graph.org/file/c7bfbb70de2adbac859ee.jpg")
-START_IMG9 = os.environ.get("https://graph.org/file/7ca38a38090ad9f3e16b0.jpg")
+START_IMG3 = os.environ.get("https://telegra.ph/file/3fd4025a4f9864b7819f0.jpg")
+START_IMG4 = os.environ.get("https://telegra.ph/file/6db1c486e1266eb1991f1.jpg")
+START_IMG5 = os.environ.get("https://telegra.ph/file/4f26ff4ad7bd6a7a6c9f2.jpg")
+START_IMG6 = os.environ.get("")
+START_IMG7 = os.environ.get("https://telegra.ph/file/4f26ff4ad7bd6a7a6c9f2.jpg")
+START_IMG8 = os.environ.get("https://telegra.ph/file/4f26ff4ad7bd6a7a6c9f2.jpg")
+START_IMG9 = os.environ.get("https://telegra.ph/file/6db1c486e1266eb1991f1.jpg")
 START_IMG10 = os.environ.get("https://graph.org/file/178a27531b99dfeffd70b.jpg")
 STKR = os.environ.get("STKR", "CAACAgUAAxkBAAIrmGPowSnK3r_vRdbF4XIGlMH96JFWAAKIBQACJIpZVFm_q-vw2ClpLgQ")
 STKR1 = os.environ.get("STKR1", "CAACAgUAAxkBAAIrkWPowR2DK8uD3MtiJrvSxDGUuOGhAAIrBQACgJ5YVOetqbdOj2DXLgQ")
@@ -105,40 +105,40 @@ STICKER = [
 ]
 START = f"""
 **๏ ʜᴇʏ, ɪ ᴀᴍ [{BOT_NAME}]({START_IMG1})**
-**➻ ᴀɴ ᴀɪ ʙᴀsᴇᴅ ᴄʜᴀᴛʙᴏᴛ**
+**ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤**
 **──────────────**
 **➻ ᴜsᴀɢᴇ /chatbot [ᴏɴ/ᴏғғ]**
-<b>||๏ ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ.||</b>
+<b>||๏ 𝐀𝐊𝐄𝐋𝐄 𝐊𝐇𝐀𝐃𝐄 𝐇𝐎𝐍𝐄 𝐊𝐀 𝐒𝐀𝐇𝐀𝐒 𝐑𝐀𝐊𝐇𝐎 𝐂𝐇𝐀𝐇𝐄 𝐏𝐔𝐑𝐈 𝐊𝐀𝐘𝐍𝐀𝐓 𝐀𝐀𝐏𝐊𝐄 𝐊𝐇𝐈𝐋𝐀𝐅 𝐊𝐇𝐀𝐃𝐈 𝐇𝐎 🚬🦋🖤🔥.||</b>
 """
 DEV_OP = [
     [
-        InlineKeyboardButton(text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"t.me/{OWNER_USERNAME}"),
-        InlineKeyboardButton(text="✨ ꜱᴜᴘᴘᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_GRP}"),
+        InlineKeyboardButton(text="🚩 ᴏᴡɴᴇʀ 🚩", url=f"t.me/{OWNER_USERNAME}"),
+        InlineKeyboardButton(text="🚩ꜱᴜᴘᴘᴏʀᴛ 🚩", url=f"https://t.me/{SUPPORT_GRP}"),
     ],
     [
         InlineKeyboardButton(
-            text="🧸 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 🧸",
+            text="🚩 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 🚩",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="🚀 ʜᴇʟᴘ & ᴄᴍᴅs 🚀", callback_data="HELP"),
+        InlineKeyboardButton(text="🚩 ʜᴇʟᴘ & ᴄᴍᴅs 🚩", callback_data="HELP"),
     ],
     [
-        InlineKeyboardButton(text="❄️ sᴏᴜʀᴄᴇ ❄️", callback_data="SOURCE"),
-        InlineKeyboardButton(text="☁️ ᴀʙᴏᴜᴛ ☁️", callback_data="ABOUT"),
+        InlineKeyboardButton(text="🚩 sᴏᴜʀᴄᴇ 🚩", callback_data="SOURCE"),
+        InlineKeyboardButton(text="🚩 ᴀʙᴏᴜᴛ 🚩", callback_data="ABOUT"),
     ],
 ]
 PNG_BTN = [
     [
          InlineKeyboardButton(
-             text="🧸 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 🧸",
+             text="🚩 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 🚩",
              url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
          ),
      ],
      [
          InlineKeyboardButton(
-             text="✨ sᴜᴘᴘᴏʀᴛ ✨", 
+             text="🚩 sᴜᴘᴘᴏʀᴛ 🚩", 
              url=f"https://t.me/{SUPPORT_GRP}",
          ),
      ],
@@ -148,27 +148,27 @@ HELP_READ = f"""
 <u>**ᴀʀᴇ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ!**</u>
 **ᴀʟʟ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ:/**
 **──────────────**
-<b>||©️ @{OWNER_USERNAME}||</b>
+
 """
 BACK = [
      [
-           InlineKeyboardButton(text="✨ ʙᴀᴄᴋ ✨", callback_data="BACK"),
+           InlineKeyboardButton(text="🚩 ʙᴀᴄᴋ 🚩", callback_data="BACK"),
      ],
 ]
 HELP_BTN = [
      [
-          InlineKeyboardButton(text="🐳 ᴄʜᴀᴛʙᴏᴛ 🐳", callback_data="CHATBOT_CMD"),
-          InlineKeyboardButton(text="🎄 ᴛᴏᴏʟs 🎄", callback_data="TOOLS_DATA"),
+          InlineKeyboardButton(text="🚩 ᴄʜᴀᴛʙᴏᴛ 🚩", callback_data="CHATBOT_CMD"),
+          InlineKeyboardButton(text="🚩 ᴛᴏᴏʟs 🚩", callback_data="TOOLS_DATA"),
      ],
      [
-          InlineKeyboardButton(text="✨ ʙᴀᴄᴋ ✨", callback_data="BACK"),
-          InlineKeyboardButton(text="❄️ ᴄʟᴏsᴇ ❄️", callback_data="CLOSE"),
+          InlineKeyboardButton(text="🚩 ʙᴀᴄᴋ 🚩", callback_data="BACK"),
+          InlineKeyboardButton(text="🚩 ᴄʟᴏsᴇ 🚩", callback_data="CLOSE"),
      ],
 ]
 
 CLOSE_BTN = [
       [
-           InlineKeyboardButton(text="❄️ ᴄʟᴏsᴇ ❄️", callback_data="CLOSE"),
+           InlineKeyboardButton(text="🚩 ᴄʟᴏsᴇ 🚩", callback_data="CLOSE"),
       ],
 ]
 
@@ -182,12 +182,12 @@ CHATBOT_ON = [
 PNG_BTN = [
     [
          InlineKeyboardButton(
-             text="🧸 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 🧸",
+             text="🚩 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 🧸",
              url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
          ),
      ],
      [
-         InlineKeyboardButton(text="✨ ᴄʟᴏsᴇ ✨", 
+         InlineKeyboardButton(text="🚩 ᴄʟᴏsᴇ 🚩", 
                               callback_data="CLOSE",
          ),
      ],
@@ -199,7 +199,7 @@ TOOLS_DATA_READ = f"""
 **──────────────**
 **➻ ᴜsᴇ `/ping` ғᴏʀ ᴄʜᴇᴄᴋɪɴɢ ᴛʜᴇ ᴘɪɴɢ ᴏғ {BOT_NAME}**
 **──────────────**
-<b>||©️ @{OWNER_USERNAME}||</b>
+
 """
 
 async def is_served_user(user_id: int) -> bool:
@@ -247,7 +247,7 @@ CHATBOT_READ = f"""
 **➻ ᴜsᴇ `/chatbot` ᴛᴏ ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴛʜᴇ ᴄʜᴀᴛʙᴏᴛ.**
 **๏ ɴᴏᴛᴇ ➻ ᴛʜᴇ ᴀʙᴏᴠᴇ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ ᴄʜᴀᴛʙᴏᴛ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ!!**
 **───────────────**
-<b>||©️ @{OWNER_USERNAME}||</b>
+
 """
 CHATBOT_BACK = [
         [     
@@ -283,7 +283,7 @@ ABOUT_BTN = [
            InlineKeyboardButton(text="✨ ʙᴀᴄᴋ ✨", callback_data="BACK"),
       ],
 ]
-SOURCE_READ = f"**ʜᴇʏ, ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ᴏғ [{BOT_NAME}](https://t.me/{BOT_USERNAME}) ɪs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.**\n**ᴘʟᴇᴀsᴇ ғᴏʀᴋ ᴛʜᴇ ʀᴇᴘᴏ & ɢɪᴠᴇ ᴛʜᴇ sᴛᴀʀ ✯**\n**──────────────────**\n**ʜᴇʀᴇ ɪs ᴛʜᴇ [sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ](https://github.com/Devarora-0981/Mickey)**\n**──────────────────**\n**ɪғ ʏᴏᴜ ғᴀᴄᴇ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴛʜᴇɴ ᴄᴏɴᴛᴀᴄᴛ ᴀᴛ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_GRP}).\n<b>||©️ @{OWNER_USERNAME}||</b>"
+SOURCE_READ = f"**ʜᴇʏ, ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ᴏғ [{BOT_NAME}](https://t.me/{BOT_USERNAME}) ɪs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.**\n**ᴘʟᴇᴀsᴇ ғᴏʀᴋ ᴛʜᴇ ʀᴇᴘᴏ & ɢɪᴠᴇ ᴛʜᴇ sᴛᴀʀ ✯**\n**──────────────────**\n**ʜᴇʀᴇ ɪs ᴛʜᴇ [sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ](https://telegra.ph/file/4f26ff4ad7bd6a7a6c9f2.jpg)**\n**──────────────────**\n**ɪғ ʏᴏᴜ ғᴀᴄᴇ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴛʜᴇɴ ᴄᴏɴᴛᴀᴄᴛ ᴀᴛ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_GRP}).\n<b>||"
 
 ABOUT_READ = f"""
 **➻ [{BOT_NAME}](https://t.me/{BOT_USERNAME}) ɪs ᴀɴ ᴀɪ ʙᴀsᴇᴅ ᴄʜᴀᴛ-ʙᴏᴛ.**
