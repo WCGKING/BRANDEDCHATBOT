@@ -1,5 +1,5 @@
-#Don't remove This Line From Here. @Dev_Arora_0981 | @DevArora0981
-#Github :- Devarora0981 | Devarora0987
+#Don't remove This Line From Here. @BRANDEDKING82| @BRANDRD_BOT 
+#Github :- WCGKING | @BRANDED_WORLD 
 import requests
 import random
 import os
@@ -15,15 +15,15 @@ from pymongo import MongoClient
 from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 
 
-API_ID = os.environ.get("API_ID","19709640") 
-API_HASH = os.environ.get("API_HASH","74da684415a162c2a0baf80ebf86f556") 
-BOT_TOKEN = os.environ.get("BOT_TOKEN","6137836765:AAEzCa9Swzl3Rk44R7Al3A3o6etJjuLpYOA") 
+API_ID = os.environ.get("API_ID","") 
+API_HASH = os.environ.get("API_HASH","") 
+BOT_TOKEN = os.environ.get("BOT_TOKEN","") 
 MONGO_URL = os.environ.get("MONGO_URL","mongodb+srv://Musicbot58:93529352@cluster0.n6wscri.mongodb.net/?retryWrites=true&w=majority")
 BOT_USERNAME = os.environ.get("Khushi_chat_bot") 
-UPDATE_CHNL = os.environ.get("https://t.me/networkwcg")
-OWNER_ID = os.environ.get("5922967509")
-OWNER_USERNAME = os.environ.get("@King82w")
-SUPPORT_GRP = os.environ.get("https://t.me/Worldchattinggroup0")
+UPDATE_CHNL = os.environ.get("https://t.me/BRANDRD_BOT")
+OWNER_ID = os.environ.get("6258877205")
+OWNER_USERNAME = os.environ.get("BRANDEDKING82")
+SUPPORT_GRP = os.environ.get("https://t.me/BRANDED_WORLD")
 BOT_NAME = os.environ.get("≛⃝𝐌𝐈𝐒𝐒 🇰𝐡𝐮𝐬𝐡𝐢 𓆩 𝐃𝐑𝐀𝐌𝐀 🇶𝗨𝗘𝗘𝗡๛🖤")
 START_IMG1 = os.environ.get("https://telegra.ph/file/b27a946b7dd4a89dcb205.jpg")
 START_IMG2 = os.environ.get("https://graph.org/file/70c214a03ad0b53d239e0.jpg")
