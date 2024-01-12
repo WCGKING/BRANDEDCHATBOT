@@ -1,5 +1,5 @@
-#Don't remove This Line From Here. @BRANDEDKING82| @BRANDRD_BOT 
-#Github :- WCGKING | @BRANDED_WORLD 
+#Don't remove This Line From Here.  @saikosaiyan| @saikosaiyan
+#Github :- WCGKING | @saikosaiyan
 import requests
 import random
 import os
@@ -19,12 +19,12 @@ API_ID = os.environ.get("API_ID","")
 API_HASH = os.environ.get("API_HASH","") 
 BOT_TOKEN = os.environ.get("BOT_TOKEN","") 
 MONGO_URL = os.environ.get("MONGO_URL","mongodb+srv://Musicbot58:93529352@cluster0.n6wscri.mongodb.net/?retryWrites=true&w=majority")
-BOT_USERNAME = os.environ.get("Khushi_chat_bot") 
-UPDATE_CHNL = os.environ.get("https://t.me/BRANDRD_BOT")
-OWNER_ID = os.environ.get("6258877205")
-OWNER_USERNAME = os.environ.get("BRANDEDKING82")
-SUPPORT_GRP = os.environ.get("https://t.me/BRANDED_WORLD")
-BOT_NAME = os.environ.get("≛⃝𝐌𝐈𝐒𝐒 🇰𝐡𝐮𝐬𝐡𝐢 𓆩 𝐃𝐑𝐀𝐌𝐀 🇶𝗨𝗘𝗘𝗡๛🖤")
+BOT_USERNAME = os.environ.get("Black_chat_bot") 
+UPDATE_CHNL = os.environ.get("https://t.me/BlackMusicSupport")
+OWNER_ID = os.environ.get("6950353753")
+OWNER_USERNAME = os.environ.get("@SaikoSaiyan")
+SUPPORT_GRP = os.environ.get("https://t.me/Exampurrrrrr")
+BOT_NAME = os.environ.get("𓆩𝖡𝖫𝖠𝖢𝖪 𝖫𝖮𝖵𝖤𝖱")
 START_IMG1 = os.environ.get("https://telegra.ph/file/b27a946b7dd4a89dcb205.jpg")
 START_IMG2 = os.environ.get("https://graph.org/file/70c214a03ad0b53d239e0.jpg")
 START_IMG3 = os.environ.get("https://telegra.ph/file/3fd4025a4f9864b7819f0.jpg")
@@ -697,5 +697,5 @@ async def vickprivatesticker(client: Client, message: Message):
            if not Yo == "text":
                await message.reply_sticker(f"{hey}")
 
-print(f"{BOT_NAME} 𝗜𝗦 𝗔𝗟𝗜𝗩𝗘! 𝗡𝗢𝗪 𝗙𝗨𝗖𝗞 𝗢𝗙𝗙! 𝗦𝗘𝗡𝗗 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗘𝗡𝗗 𝗧𝗢 @BRANDEDKING82 , @BRANDED_WORLD , @BRANDRD_BOT , @BRANDED_PAID_CC 𝗕𝗜𝗧𝗖𝗛!!")      
+print(f"{BOT_NAME} 𝗜𝗦 𝗔𝗟𝗜𝗩𝗘! 𝗡𝗢𝗪 𝗙𝗨𝗖𝗞 𝗢𝗙𝗙! 𝗦𝗘𝗡𝗗 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗘𝗡𝗗 𝗧𝗢  @saikosaiyan , @BlackMusicSupport ,  @saikosaiyan ,  @saikosaiyan 𝗕𝗜𝗧𝗖𝗛!!")      
 bot.run()
