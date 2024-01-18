@@ -3,5 +3,5 @@ pymongo
 motor
 requests
 dnspython
-tgcrypto==1.2.2
+tgcrypto==1.2.5
 asyncio
