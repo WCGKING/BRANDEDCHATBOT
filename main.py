@@ -52,7 +52,7 @@ g=choice(x)
 async def is_admins(chat_id: int):
     return [
         member.user.id
-        async for member in Mukesh.get_chat_members(
+        async for member in BRANDEDCHAT.get_chat_members(
             chat_id, filter=enums.ChatMembersFilter.ADMINISTRATORS
         )
     ]
@@ -263,7 +263,7 @@ async def vickai(client: Client, message: Message):
        vick = vickdb["VickDb"]["Vick"] 
        is_vick = vick.find_one({"chat_id": message.chat.id})
        if not is_vick:
-           await Mukesh.send_chat_action(message.chat.id, ChatAction.TYPING)
+           await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
            K = []  
            is_chat = chatai.find({"word": message.text})  
            k = chatai.find_one({"word": message.text})      
@@ -282,7 +282,7 @@ async def vickai(client: Client, message: Message):
        vickdb = MongoClient(MONGO_URL)
        vick = vickdb["VickDb"]["Vick"] 
        is_vick = vick.find_one({"chat_id": message.chat.id})    
-       getme = await Mukesh.get_me()
+       getme = await BRANDEDCHAT.get_me()
        bot_id = getme.id                             
        if message.reply_to_message.from_user.id == bot_id: 
            if not is_vick:                   
@@ -348,11 +348,11 @@ async def vickstickerai(client: Client, message: Message):
        vickdb = MongoClient(MONGO_URL)
        vick = vickdb["VickDb"]["Vick"] 
        is_vick = vick.find_one({"chat_id": message.chat.id})
-       getme = await Mukesh.get_me()
+       getme = await BRANDEDCHAT.get_me()
        bot_id = getme.id
        if message.reply_to_message.from_user.id == bot_id: 
            if not is_vick:                    
-               await Mukesh.send_chat_action(message.chat.id, ChatAction.TYPING)
+               await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
                K = []  
                is_chat = chatai.find({"word": message.text})
                k = chatai.find_one({"word": message.text})      
@@ -391,7 +391,7 @@ async def vickprivate(client: Client, message: Message):
    chatdb = MongoClient(MONGO_URL)
    chatai = chatdb["Word"]["WordDb"]
    if not message.reply_to_message: 
-       await Mukesh.send_chat_action(message.chat.id, ChatAction.TYPING)
+       await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
        K = []  
        is_chat = chatai.find({"word": message.text})                 
        for x in is_chat:
