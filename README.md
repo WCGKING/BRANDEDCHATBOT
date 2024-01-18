@@ -28,8 +28,7 @@
 <p align="center"><a href="https://t.me/BRANDRD_BOT"> <img src="https://img.shields.io/badge/JOIN-SUPPORT%20CHANNEL-black?style=for-the-badge&logo=Telegram" width="220" height="38.5"/></a></p>
 
 ## sᴘᴇᴄɪᴀʟ ᴛʜᴀɴᴋs 🚬🦋
-- [ʀᴀᴊ](https://github.com/Moezilla)
-- [ᴘᴏɪsᴏɴ ᴘᴏᴡᴇʀ](https://github.com/Rajpomane)
+
 - [Rᴏʏᴀʟ Rᴀᴊᴘᴜᴛ](https://t.me/BRANDED_WORLD)
 - [Bʀᴀɴᴅᴇᴅ ᴋɪɴɢ](https://t.me/BRANDRD_BOT)
 
