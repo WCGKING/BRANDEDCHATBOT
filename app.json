@@ -1,6 +1,5 @@
 {
-    "name": "💫 BRANDEDCHATBOT 🙈",   
-    "logo": "https://te.legra.ph/file/c46b864a2f3c533168f84.jpg", 
+    "name": "chatbot",    
     "env": {
         "BOT_TOKEN": {
             "description": "telegram bot token here",
@@ -12,100 +11,30 @@
         },
         "BOT_USERNAME": {
             "description": "telegram bot username here without @",
-            "required": true
+            "required": false
         },
         "OWNER_USERNAME": {
             "description": "Owner Username without @",
-            "required": true
+            "required": false
         },
         "BOT_NAME": {
             "description": "Simple Bot-name. Do not use Modified Text..",
-            "required": true
+            "required": false
         },
         "UPDATE_CHNL": {
             "description": "Your Updates Channel without @",
-            "required": true
+            "required": false
         },
         "SUPPORT_GRP": {
             "description": "Your Support Group without @",
-            "required": true
-        },
-        "STKR": {
-            "description": "Sticker for start ",
             "required": false
         },
-        "STKR1": {
-            "description": "Sticker for start ",
+        
+        "START_IMG": {
+            "description": "Start Image For Bot.",
             "required": false
         },
-        "STKR2": {
-            "description": "Sticker for start ",
-            "required": false
-        },
-        "STKR3": {
-            "description": "Sticker for start ",
-            "required": false
-        },
-        "STKR4": {
-            "description": "Sticker for start ",
-            "required": false 
-        },
-        "STKR5": {
-            "description": "Sticker for start ",
-            "required": false 
-        },
-        "STKR6": {
-            "description": "Sticker for start ",
-            "required": false 
-        },
-        "STKR7": {
-            "description": "Sticker for start ",
-            "required": false 
-        },
-       "STKR8": {
-            "description": "Sticker for start ",
-            "required": false 
-        },
-        "START_IMG1": {
-            "description": "Start Image For Bot.",
-            "required": true
-        },
-        "START_IMG2": {
-            "description": "Start Image For Bot.",
-            "required": true
-        },
-        "START_IMG3": {
-            "description": "Start Image For Bot.",
-            "required": true
-        },
-        "START_IMG4": {
-            "description": "Start Image For Bot.",
-            "required": true
-        },
-        "START_IMG5": {
-            "description": "Start Image For Bot.",
-            "required": true
-        },
-        "START_IMG6": {
-            "description": "Start Image For Bot.",
-            "required": true
-        },
-        "START_IMG7": {
-            "description": "Start Image For Bot.",
-            "required": true
-        },
-        "START_IMG8": {
-            "description": "Start Image For Bot.",
-            "required": true
-        },
-        "START_IMG9": {
-            "description": "Start Image For Bot.",
-            "required": true
-        },
-        "START_IMG10": {
-            "description": "Start Image For Bot.",
-            "required": true
-        },
+        
         "API_ID": {
             "description": "telegram api id here",
             "required": true
