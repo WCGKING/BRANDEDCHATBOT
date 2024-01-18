@@ -1,7 +1,6 @@
-pyrogram==2.0.106
+pyrogram
 pymongo
-motor
 requests
 dnspython
-tgcrypto==1.2.5
+tgcrypto==1.2.2
 asyncio
