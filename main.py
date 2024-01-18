@@ -52,7 +52,7 @@ bot = Client(
     bot_token = BOT_TOKEN
 )
 
-mongo = MongoCli(MONGO_URL)
+mongo = MongoClient(MONGO_URL)
 db = mongo.Anonymous
 chatsdb = db.chatsdb
 usersdb = db.users
