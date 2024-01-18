@@ -447,10 +447,10 @@ async def vickprivatesticker(client: Client, message: Message):
        if not Yo == "text":
            await message.reply_sticker(f"{hey}")
    if message.reply_to_message:            
-       getme = await Mukesh.get_me()
+       getme = await BRANDEDCHAT.get_me()
        bot_id = getme.id       
        if message.reply_to_message.from_user.id == bot_id:                    
-           await Mukesh.send_chat_action(message.chat.id, ChatAction.TYPING)
+           await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
            K = []  
            is_chat = chatai.find({"word": message.sticker.file_unique_id})                 
            for x in is_chat:
