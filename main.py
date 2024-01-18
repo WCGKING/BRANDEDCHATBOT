@@ -26,7 +26,7 @@ STKR = os.environ.get("STKR")
 
 
 StartTime = time.time()
-Mukesh = Client(
+BRANDEDCHAT = Client(
     "chat-bot" ,
     api_id = API_ID,
     api_hash = API_HASH ,
