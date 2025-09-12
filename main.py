@@ -126,11 +126,10 @@ async def must_join_channel(bot: Client, msg: Message):
                 pass
     except ChatAdminRequired:
         print(f"Promote me as an admin in the UPDATE CHANNEL  : {UPDATE_CHNL} !")
-@BRANDEDCHAT.on_message(filters.command(["start",f"start@{BOT_USERNAME}"]))
-        async def restart(client):
-        await m.reply("Restarting...")
-        if accha.text != new_text:
-        await accha.edit(new_text)
+@BRANDEDCHAT.on_message(filters.command(["start",f"start@{BOT_USERNAME}"])
+async def restart(client, m: Message):
+        accha = await m.reply_text(
+                        text = f"{g}")                        
         await asyncio.sleep(1)
         await accha.edit("🦋𝗡𝗢𝗪 𝗖𝗢𝗠𝗘 𝗛𝗘𝗥𝗘 👉 @BRANDED_WORLD , @BRANDRD_BOT , @BRANDED_PAID_CC 𝗔𝗡𝗗 𝗠𝗔𝗞𝗘 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗡𝗗 🥀 𝗜𝗙 𝗬𝗢 𝗛𝗔𝗩𝗘 𝗔 𝗚𝗜𝗥𝗟𝗙𝗜𝗘𝗡𝗗  😘 𝗧𝗛𝗘𝗡 𝗬𝗢𝗨 𝗪𝗜𝗟𝗟 𝗚𝗜𝗙𝗧 🙊 𝗧𝗢 𝗠𝗬 𝗢𝗪𝗡𝗘𝗥 @BRANDEDKING8 ❤️")
         await asyncio.sleep(0.2)
