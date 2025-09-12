@@ -1,3 +1,4 @@
+from pyrogram.errors import ChatAdminRequired, UserNotParticipant
 from pyrogram import Client, filters
 from pyrogram.types import *
 from pymongo import MongoClient
