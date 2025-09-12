@@ -128,6 +128,7 @@ async def must_join_channel(bot: Client, msg: Message):
         print(f"Promote me as an admin in the UPDATE CHANNEL  : {UPDATE_CHNL} !")
 @BRANDEDCHAT.on_message(filters.command(["start",f"start@{BOT_USERNAME}"]))
         async def restart(client, m: Message):
+        await m.reply("Restarting...")
         if accha.text != new_text:
         await accha.edit(new_text)
         await asyncio.sleep(1)
