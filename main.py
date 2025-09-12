@@ -132,7 +132,7 @@ async def restart(client, m: Message):
                         text = f"{g}")                        
         await asyncio.sleep(1)
         await accha.edit("🦋Nᴏᴡ Cᴏᴍᴇ Hᴇʀᴇ 👉 @BRANDED_WORLD , @BRANDED_PAID_CC Aɴᴅ Mᴀᴋᴇ Yᴏᴜʀ Gɪʀʟғʀɪᴇɴᴅ 🥀 Iғ Yᴏ Hᴀᴠᴇ A Gɪʀʟғʀɪᴇɴᴅ 😘 Tʜᴇɴ Yᴏᴜ Wɪʟʟ Gɪғᴛ 🙊 Tᴏ Mʏ Oᴡɴᴇʀ @BRANDEDKING8 ❤️")
-        await asyncio.sleep(0.2)
+        await asyncio.sleep(0.3)
         await accha.delete("🦋Nᴏᴡ Cᴏᴍᴇ Hᴇʀᴇ 👉 @BRANDED_WORLD , @BRANDED_PAID_CC Aɴᴅ Mᴀᴋᴇ Yᴏᴜʀ Gɪʀʟғʀɪᴇɴᴅ 🥀 Iғ Yᴏ Hᴀᴠᴇ A Gɪʀʟғʀɪᴇɴᴅ 😘 Tʜᴇɴ Yᴏᴜ Wɪʟʟ Gɪғᴛ 🙊 Tᴏ Mʏ Oᴡɴᴇʀ @BRANDEDKING8 ❤️")
         umm = await m.reply_sticker(
                   sticker = STKR,
