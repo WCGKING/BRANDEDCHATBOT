@@ -1,3 +1,16 @@
+import os
+import random
+import asyncio
+import time
+from datetime import datetime
+
+from pymongo import MongoClient   # ✅ REQUIRED
+from pyrogram import Client, filters, enums
+from pyrogram.types import *
+from pyrogram.errors import ChatAdminRequired, UserNotParticipant
+from pyrogram.enums import ChatAction
+
+
 mongo = MongoClient(MONGO_URL)
 vickdb = mongo["VickDb"]["Vick"]
 chatai = mongo["Word"]["WordDb"]
