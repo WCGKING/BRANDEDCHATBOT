@@ -118,43 +118,18 @@ chatai = mongo[
     "WordDb"
 ]
 
-
 # ============================================================
 # DATABASE INDEXES
 # ============================================================
+# MongoDB already contains the required indexes:
+#
+# chat_id_1
+# word_1_autocreated
+#
+# No manual index creation is required.
+# ============================================================
 
-try:
-
-    # Only create chat_id index.
-    #
-    # IMPORTANT:
-    # Do NOT create an index on "word".
-    #
-    # Your MongoDB already has:
-    #
-    # word_1_autocreated
-    #
-    # Creating another "word" index causes:
-    #
-    # IndexOptionsConflict / code 85
-    #
-
-    vickdb.create_index(
-        [("chat_id", 1)],
-        unique=True,
-        name="chat_id_unique",
-    )
-
-    print(
-        "✅ MongoDB indexes ready"
-    )
-
-except Exception as e:
-
-    print(
-        f"⚠️ MongoDB index warning: {e}"
-    )
-
+print("✅ Using existing MongoDB indexes")
 
 # ============================================================
 # ADMIN CHECK
