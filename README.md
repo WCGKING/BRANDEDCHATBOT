@@ -1,7 +1,7 @@
 ## ʙʀᴀɴᴅᴇᴅ ᴋɪɴɢ 🚬🦋
 
 <h2 align="center">   
-    ──「◄⏤͟͞ꭙͯ͢³⋆꯭ꙶ⋆꯭ͣ⋆᭄ͫ͢🍁⃝🇧𝐑𝐀𝐍𝐃𝐄𝐃 ᥫᩣ🇰𝗜𝗡𝗚𐏓꯭ ᷞ ͦ͢ ͮ ͤ𓆪🕊⃝🦋 」──  
+    ──「𝗕𝗥𝗔𝗡𝗗𝗘𝗗 𓆩🇽𓆪 𝗞𝗜𝗡𝗚 🪬⃤ 」──  
    </h2>  
  <p align="center">   
 <img src="https://graph.org/file/51e1bf391ebb7421aca57.jpg"
@@ -24,12 +24,12 @@
 <p align="center"><a href="https://t.me/https:WCGKING/BRANDEDCHATBOT"> <img src="https://img.shields.io/badge/CHECK-Demo%20Robot-black?style=for-the-badge&logo=Telegram" width="220" height="39"/></a></p>
 
 ### sᴜᴘᴘᴏʀᴛ
-<p align="center"><a href="https://t.me/BRANDED_WORLD"> <img src="https://img.shields.io/badge/JOIN-SUPPORT%20GROUP-black?style=for-the-badge&logo=Telegram" width="220" height="38.5"/></a></p>
+<p align="center"><a href="https://t.me/BRANDED_PAID_CC"> <img src="https://img.shields.io/badge/JOIN-SUPPORT%20GROUP-black?style=for-the-badge&logo=Telegram" width="220" height="38.5"/></a></p>
 <p align="center"><a href="https://t.me/BRANDRD_BOT"> <img src="https://img.shields.io/badge/JOIN-SUPPORT%20CHANNEL-black?style=for-the-badge&logo=Telegram" width="220" height="38.5"/></a></p>
 
 ## sᴘᴇᴄɪᴀʟ ᴛʜᴀɴᴋs 🚬🦋
 
-- [Rᴏʏᴀʟ Rᴀᴊᴘᴜᴛ](https://t.me/BRANDED_WORLD)
+- [Rᴏʏᴀʟ Rᴀᴊᴘᴜᴛ](https://t.me/BRANDED_PAID_CC)
 - [Bʀᴀɴᴅᴇᴅ ᴋɪɴɢ](https://t.me/BRANDRD_BOT)
 
 
