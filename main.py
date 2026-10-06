@@ -1,5 +1,4 @@
 import os
-import random
 from datetime import datetime
 
 from dotenv import load_dotenv
@@ -25,16 +24,6 @@ API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
 MONGO_URL = os.getenv("MONGO_URL")
 
-BOT_NAME = os.getenv(
-    "BOT_NAME",
-    "Vick Bot"
-)
-
-START_IMG = os.getenv(
-    "START_IMG",
-    ""
-)
-
 
 # ============================================================
 # CHECK REQUIRED VARIABLES
@@ -55,7 +44,6 @@ if not MONGO_URL:
     missing.append("MONGO_URL")
 
 if missing:
-
     raise RuntimeError(
         "❌ Missing environment variables: "
         + ", ".join(missing)
@@ -90,7 +78,6 @@ try:
         retryWrites=True,
     )
 
-    # Test connection
     mongo.admin.command("ping")
 
     print("✅ MongoDB connected successfully")
@@ -118,18 +105,22 @@ chatai = mongo[
     "WordDb"
 ]
 
+
 # ============================================================
 # DATABASE INDEXES
 # ============================================================
-# MongoDB already contains the required indexes:
+#
+# Existing indexes:
 #
 # chat_id_1
 # word_1_autocreated
 #
-# No manual index creation is required.
+# No manual create_index() is required.
+#
 # ============================================================
 
 print("✅ Using existing MongoDB indexes")
+
 
 # ============================================================
 # ADMIN CHECK
@@ -174,14 +165,8 @@ async def chatbot_command(
     message: Message
 ):
 
-    # --------------------------------------------------------
-    # USER CHECK
-    # --------------------------------------------------------
-
     if not message.from_user:
-
         return
-
 
     # --------------------------------------------------------
     # ADMIN CHECK
@@ -196,7 +181,6 @@ async def chatbot_command(
             "❌ You must be an admin to use this command."
         )
 
-
     # --------------------------------------------------------
     # ARGUMENT CHECK
     # --------------------------------------------------------
@@ -210,11 +194,8 @@ async def chatbot_command(
             "/chatbot off"
         )
 
-
     action = message.command[1].lower()
-
     chat_id = message.chat.id
-
 
     # ========================================================
     # ENABLE CHATBOT
@@ -231,27 +212,21 @@ async def chatbot_command(
             }
         )
 
-
-        # Already enabled
         if not disabled:
 
             return await message.reply_text(
                 "✅ Chatbot is already enabled."
             )
 
-
-        # Remove disabled record
         vickdb.delete_one(
             {
                 "chat_id": chat_id
             }
         )
 
-
         return await message.reply_text(
             "✅ Chatbot enabled successfully."
         )
-
 
     # ========================================================
     # DISABLE CHATBOT
@@ -268,16 +243,12 @@ async def chatbot_command(
             }
         )
 
-
-        # Already disabled
         if disabled:
 
             return await message.reply_text(
                 "⚠️ Chatbot is already disabled."
             )
 
-
-        # Save disabled chat
         vickdb.insert_one(
             {
                 "chat_id": chat_id,
@@ -285,11 +256,9 @@ async def chatbot_command(
             }
         )
 
-
         return await message.reply_text(
             "🚫 Chatbot disabled successfully."
         )
-
 
     # ========================================================
     # INVALID OPTION
@@ -317,24 +286,14 @@ async def ai_text(
     message: Message
 ):
 
-    # --------------------------------------------------------
-    # BASIC CHECK
-    # --------------------------------------------------------
-
     if not message.text:
-
         return
-
 
     chat_id = message.chat.id
-
     user_text = message.text.strip()
 
-
     if not user_text:
-
         return
-
 
     # --------------------------------------------------------
     # CHECK CHATBOT STATUS
@@ -349,27 +308,11 @@ async def ai_text(
         }
     )
 
-
     if disabled:
-
         return
 
-
     # ========================================================
-    # FIND REPLY
-    # ========================================================
-    #
-    # IMPORTANT:
-    #
-    # We are NOT doing:
-    #
-    # list(chatai.find(...))
-    #
-    # because that loads every matching reply into RAM.
-    #
-    # Instead MongoDB itself selects one random document.
-    #
-    # This is faster and better for large collections.
+    # FIND RANDOM REPLY
     # ========================================================
 
     try:
@@ -401,11 +344,8 @@ async def ai_text(
 
         return
 
-
     if not result:
-
         return
-
 
     # --------------------------------------------------------
     # GET REPLY
@@ -419,11 +359,8 @@ async def ai_text(
         "check"
     )
 
-
     if not reply_text:
-
         return
-
 
     # ========================================================
     # STICKER REPLY
@@ -445,7 +382,6 @@ async def ai_text(
 
         return
 
-
     # ========================================================
     # TEXT REPLY
     # ========================================================
@@ -464,64 +400,6 @@ async def ai_text(
 
 
 # ============================================================
-# START COMMAND
-# ============================================================
-
-@BRANDEDCHAT.on_message(
-    filters.command("start")
-)
-async def start(
-    _,
-    message: Message
-):
-
-    user = (
-        message.from_user.mention
-        if message.from_user
-        else "there"
-    )
-
-
-    text = (
-        f"👋 Hello {user}!\n\n"
-        f"🤖 <b>{BOT_NAME}</b> is online.\n\n"
-        "Use <code>/chatbot on</code> or "
-        "<code>/chatbot off</code> in groups."
-    )
-
-
-    # --------------------------------------------------------
-    # START IMAGE
-    # --------------------------------------------------------
-
-    if START_IMG:
-
-        try:
-
-            await message.reply_photo(
-                photo=START_IMG,
-                caption=text,
-            )
-
-            return
-
-        except Exception as e:
-
-            print(
-                f"⚠️ START_IMG error: {e}"
-            )
-
-
-    # --------------------------------------------------------
-    # TEXT FALLBACK
-    # --------------------------------------------------------
-
-    await message.reply_text(
-        text
-    )
-
-
-# ============================================================
 # PING COMMAND
 # ============================================================
 
@@ -534,8 +412,7 @@ async def ping(
 ):
 
     await message.reply_text(
-        "🏓 <b>Pong!</b>\n"
-        "✅ Bot is working."
+        "🤖 <b>Bot is working.</b>"
     )
 
 
@@ -550,7 +427,7 @@ if __name__ == "__main__":
     )
 
     print(
-        f"🚀 {BOT_NAME} is starting..."
+        "🚀 Vick Bot is starting..."
     )
 
     print(
