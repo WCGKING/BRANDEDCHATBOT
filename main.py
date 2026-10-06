@@ -10,22 +10,34 @@ from pyrogram.types import Message
 
 
 # ============================================================
-# ENVIRONMENT
+# LOAD ENVIRONMENT
 # ============================================================
 
 load_dotenv()
+
+
+# ============================================================
+# ENVIRONMENT VARIABLES
+# ============================================================
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
 MONGO_URL = os.getenv("MONGO_URL")
 
-BOT_NAME = os.getenv("BOT_NAME", "Vick Bot")
-START_IMG = os.getenv("START_IMG", "")
+BOT_NAME = os.getenv(
+    "BOT_NAME",
+    "Vick Bot"
+)
+
+START_IMG = os.getenv(
+    "START_IMG",
+    ""
+)
 
 
 # ============================================================
-# ENVIRONMENT VALIDATION
+# CHECK REQUIRED VARIABLES
 # ============================================================
 
 missing = []
@@ -43,6 +55,7 @@ if not MONGO_URL:
     missing.append("MONGO_URL")
 
 if missing:
+
     raise RuntimeError(
         "❌ Missing environment variables: "
         + ", ".join(missing)
@@ -62,23 +75,28 @@ BRANDEDCHAT = Client(
 
 
 # ============================================================
-# MONGODB
+# MONGODB CONNECTION
 # ============================================================
 
 try:
+
     mongo = MongoClient(
         MONGO_URL,
         serverSelectionTimeoutMS=10000,
         connectTimeoutMS=10000,
         socketTimeoutMS=10000,
+        maxPoolSize=50,
+        minPoolSize=5,
+        retryWrites=True,
     )
 
-    # Test MongoDB connection
+    # Test connection
     mongo.admin.command("ping")
 
     print("✅ MongoDB connected successfully")
 
 except Exception as e:
+
     raise RuntimeError(
         f"❌ MongoDB connection failed: {e}"
     )
@@ -88,8 +106,17 @@ except Exception as e:
 # DATABASE / COLLECTIONS
 # ============================================================
 
-vickdb = mongo["VickDb"]["Vick"]
-chatai = mongo["Word"]["WordDb"]
+vickdb = mongo[
+    "VickDb"
+][
+    "Vick"
+]
+
+chatai = mongo[
+    "Word"
+][
+    "WordDb"
+]
 
 
 # ============================================================
@@ -97,16 +124,33 @@ chatai = mongo["Word"]["WordDb"]
 # ============================================================
 
 try:
+
+    # Only create chat_id index.
+    #
+    # IMPORTANT:
+    # Do NOT create an index on "word".
+    #
+    # Your MongoDB already has:
+    #
+    # word_1_autocreated
+    #
+    # Creating another "word" index causes:
+    #
+    # IndexOptionsConflict / code 85
+    #
+
     vickdb.create_index(
-        "chat_id",
-        unique=True
+        [("chat_id", 1)],
+        unique=True,
+        name="chat_id_unique",
     )
 
-    chatai.create_index(
-        "word"
+    print(
+        "✅ MongoDB indexes ready"
     )
 
 except Exception as e:
+
     print(
         f"⚠️ MongoDB index warning: {e}"
     )
@@ -156,14 +200,16 @@ async def chatbot_command(
 ):
 
     # --------------------------------------------------------
-    # User check
+    # USER CHECK
     # --------------------------------------------------------
 
     if not message.from_user:
+
         return
 
+
     # --------------------------------------------------------
-    # Admin check
+    # ADMIN CHECK
     # --------------------------------------------------------
 
     if not await is_admin(
@@ -175,8 +221,9 @@ async def chatbot_command(
             "❌ You must be an admin to use this command."
         )
 
+
     # --------------------------------------------------------
-    # Argument check
+    # ARGUMENT CHECK
     # --------------------------------------------------------
 
     if len(message.command) < 2:
@@ -188,12 +235,14 @@ async def chatbot_command(
             "/chatbot off"
         )
 
+
     action = message.command[1].lower()
 
     chat_id = message.chat.id
 
+
     # ========================================================
-    # CHATBOT ON
+    # ENABLE CHATBOT
     # ========================================================
 
     if action == "on":
@@ -201,8 +250,12 @@ async def chatbot_command(
         disabled = vickdb.find_one(
             {
                 "chat_id": chat_id
+            },
+            {
+                "_id": 1
             }
         )
+
 
         # Already enabled
         if not disabled:
@@ -211,6 +264,7 @@ async def chatbot_command(
                 "✅ Chatbot is already enabled."
             )
 
+
         # Remove disabled record
         vickdb.delete_one(
             {
@@ -218,12 +272,14 @@ async def chatbot_command(
             }
         )
 
+
         return await message.reply_text(
             "✅ Chatbot enabled successfully."
         )
 
+
     # ========================================================
-    # CHATBOT OFF
+    # DISABLE CHATBOT
     # ========================================================
 
     if action == "off":
@@ -231,8 +287,12 @@ async def chatbot_command(
         disabled = vickdb.find_one(
             {
                 "chat_id": chat_id
+            },
+            {
+                "_id": 1
             }
         )
+
 
         # Already disabled
         if disabled:
@@ -240,6 +300,7 @@ async def chatbot_command(
             return await message.reply_text(
                 "⚠️ Chatbot is already disabled."
             )
+
 
         # Save disabled chat
         vickdb.insert_one(
@@ -249,12 +310,14 @@ async def chatbot_command(
             }
         )
 
+
         return await message.reply_text(
             "🚫 Chatbot disabled successfully."
         )
 
+
     # ========================================================
-    # INVALID ACTION
+    # INVALID OPTION
     # ========================================================
 
     return await message.reply_text(
@@ -266,7 +329,7 @@ async def chatbot_command(
 
 
 # ============================================================
-# CHATBOT WORD REPLY
+# FAST CHATBOT REPLY
 # ============================================================
 
 @BRANDEDCHAT.on_message(
@@ -280,56 +343,115 @@ async def ai_text(
 ):
 
     # --------------------------------------------------------
-    # Safety check
+    # BASIC CHECK
     # --------------------------------------------------------
 
     if not message.text:
+
         return
+
 
     chat_id = message.chat.id
 
+    user_text = message.text.strip()
+
+
+    if not user_text:
+
+        return
+
+
     # --------------------------------------------------------
-    # Check whether chatbot is disabled
+    # CHECK CHATBOT STATUS
     # --------------------------------------------------------
 
     disabled = vickdb.find_one(
         {
             "chat_id": chat_id
+        },
+        {
+            "_id": 1
         }
     )
 
+
     if disabled:
+
         return
 
-    # --------------------------------------------------------
-    # Find matching word
-    # --------------------------------------------------------
-
-    data = list(
-        chatai.find(
-            {
-                "word": message.text
-            }
-        )
-    )
-
-    if not data:
-        return
-
-    # --------------------------------------------------------
-    # Random reply
-    # --------------------------------------------------------
-
-    reply = random.choice(data)
-
-    reply_text = reply.get("text")
-    reply_type = reply.get("check")
-
-    if not reply_text:
-        return
 
     # ========================================================
-    # STICKER
+    # FIND REPLY
+    # ========================================================
+    #
+    # IMPORTANT:
+    #
+    # We are NOT doing:
+    #
+    # list(chatai.find(...))
+    #
+    # because that loads every matching reply into RAM.
+    #
+    # Instead MongoDB itself selects one random document.
+    #
+    # This is faster and better for large collections.
+    # ========================================================
+
+    try:
+
+        result = next(
+            chatai.aggregate(
+                [
+                    {
+                        "$match": {
+                            "word": user_text
+                        }
+                    },
+                    {
+                        "$sample": {
+                            "size": 1
+                        }
+                    }
+                ],
+                allowDiskUse=False,
+            ),
+            None
+        )
+
+    except Exception as e:
+
+        print(
+            f"❌ MongoDB reply error: {e}"
+        )
+
+        return
+
+
+    if not result:
+
+        return
+
+
+    # --------------------------------------------------------
+    # GET REPLY
+    # --------------------------------------------------------
+
+    reply_text = result.get(
+        "text"
+    )
+
+    reply_type = result.get(
+        "check"
+    )
+
+
+    if not reply_text:
+
+        return
+
+
+    # ========================================================
+    # STICKER REPLY
     # ========================================================
 
     if reply_type == "sticker":
@@ -348,8 +470,9 @@ async def ai_text(
 
         return
 
+
     # ========================================================
-    # NORMAL TEXT
+    # TEXT REPLY
     # ========================================================
 
     try:
@@ -377,13 +500,23 @@ async def start(
     message: Message
 ):
 
-    text = (
-        f"👋 Hello {message.from_user.mention if message.from_user else 'there'}!\n\n"
-        f"🤖 {BOT_NAME} is online."
+    user = (
+        message.from_user.mention
+        if message.from_user
+        else "there"
     )
 
+
+    text = (
+        f"👋 Hello {user}!\n\n"
+        f"🤖 <b>{BOT_NAME}</b> is online.\n\n"
+        "Use <code>/chatbot on</code> or "
+        "<code>/chatbot off</code> in groups."
+    )
+
+
     # --------------------------------------------------------
-    # Send start image if configured
+    # START IMAGE
     # --------------------------------------------------------
 
     if START_IMG:
@@ -403,8 +536,9 @@ async def start(
                 f"⚠️ START_IMG error: {e}"
             )
 
+
     # --------------------------------------------------------
-    # Fallback text
+    # TEXT FALLBACK
     # --------------------------------------------------------
 
     await message.reply_text(
@@ -413,7 +547,7 @@ async def start(
 
 
 # ============================================================
-# ERROR HANDLER
+# PING COMMAND
 # ============================================================
 
 @BRANDEDCHAT.on_message(
@@ -425,7 +559,7 @@ async def ping(
 ):
 
     await message.reply_text(
-        "🏓 Pong!\n"
+        "🏓 <b>Pong!</b>\n"
         "✅ Bot is working."
     )
 
@@ -436,10 +570,24 @@ async def ping(
 
 if __name__ == "__main__":
 
-    print("=" * 50)
-    print(f"🚀 {BOT_NAME} is starting...")
-    print("✅ MongoDB connected")
-    print("✅ Pyrogram client initialized")
-    print("=" * 50)
+    print(
+        "=============================================="
+    )
+
+    print(
+        f"🚀 {BOT_NAME} is starting..."
+    )
+
+    print(
+        "✅ MongoDB connected"
+    )
+
+    print(
+        "✅ Pyrogram client initialized"
+    )
+
+    print(
+        "=============================================="
+    )
 
     BRANDEDCHAT.run()
